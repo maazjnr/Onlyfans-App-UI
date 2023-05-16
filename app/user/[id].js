@@ -16,15 +16,28 @@ const ProfilePage = () => {
     return <Text>User not found</Text>;
   }
 
-  return (
-    <View>
+  if(!isSubscribed) {
+    return (
       <UserProfileHeader
-        user={user}
-        isSubscribed={isSubscribed}
-        setIsSubscribed={setIsSubscribed}
-      />
-      <FlatList data={posts} renderItem={({ item }) => <Post post={item} />} />
-    </View>
+      user={user}
+      isSubscribed={isSubscribed}
+      setIsSubscribed={setIsSubscribed}
+    />
+    )
+  }
+
+  return (
+    <FlatList
+      ListHeaderComponent={() => (
+        <UserProfileHeader
+          user={user}
+          isSubscribed={isSubscribed}
+          setIsSubscribed={setIsSubscribed}
+        />
+      )}
+      data={posts}
+      renderItem={({ item }) => <Post post={item} />}
+    />
   );
 };
 
