@@ -1,6 +1,5 @@
 import { View, Text, Image } from "react-native";
 import { Entypo, AntDesign, Fontisto } from "@expo/vector-icons";
-import React from "react";
 
 const Post = ({ post }) => {
   return (
@@ -52,7 +51,7 @@ const Post = ({ post }) => {
         <Fontisto
           style={{ marginRight: 15 }}
           name="dollar"
-          size={20}
+          size={18}
           color="gray"
         />
       </View>

@@ -9,12 +9,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Ionicons, FontAwesome } from "@expo/vector-icons";
-import { useState } from "react";
 
-const UserProfileHeader  = ({user, isSubscribed, setIsSubscribed}) => {
-
+const UserProfileHeader = ({ user, isSubscribed, setIsSubscribed }) => {
   const router = useRouter();
-
 
   return (
     <View>
@@ -65,7 +62,7 @@ const UserProfileHeader  = ({user, isSubscribed, setIsSubscribed}) => {
           }}
         >
           <Image source={{ uri: user.avatar }} style={styles.userImage} />
-          <FontAwesome name="share-square-o" size={24} color="royalblue" />
+          <FontAwesome name="share-square-o" size={24} color="#a0b4f0" />
         </View>
 
         <Text style={{ fontSize: 20, fontWeight: "600", marginVertical: 5 }}>
@@ -83,7 +80,7 @@ const UserProfileHeader  = ({user, isSubscribed, setIsSubscribed}) => {
           style={[
             styles.button,
             {
-              backgroundColor: isSubscribed ? "#fff" : "royalblue",
+              backgroundColor: isSubscribed ? "#fff" : "#a0b4f0",
             },
           ]}
         >
@@ -91,7 +88,7 @@ const UserProfileHeader  = ({user, isSubscribed, setIsSubscribed}) => {
             style={[
               styles.buttonText,
               {
-                color: isSubscribed ? "royalblue" : "#fff",
+                color: isSubscribed ? "#a0b4f0" : "#fff",
               },
             ]}
           >
@@ -101,7 +98,7 @@ const UserProfileHeader  = ({user, isSubscribed, setIsSubscribed}) => {
             style={[
               styles.buttonText,
               {
-                color: isSubscribed ? "royalblue" : "#fff",
+                color: isSubscribed ? "#a0b4f0" : "#fff",
               },
             ]}
           >
@@ -135,7 +132,7 @@ const styles = StyleSheet.create({
   button: {
     flexDirection: "row",
     borderWidth: 1,
-    borderColor: "gainsboro",
+    borderColor: "#a0b4f0",
     padding: 15,
     borderRadius: 50,
     justifyContent: "space-between",
@@ -145,13 +142,9 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: "royalblue",
+    color: "#a0b4f0",
     fontWeight: "600",
   },
 });
 
-export default UserProfileHeader ;
-
-
-
-
+export default UserProfileHeader;
