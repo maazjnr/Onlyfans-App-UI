@@ -6,7 +6,7 @@ const Post = ({ post }) => {
     <View style={{ marginVertical: 15 }}>
       <View style={{ flexDirection: "row", alignItems: "center", padding: 10 }}>
         <Image
-          source={{ uri: post.User.avatar }}
+          src={post.User.avatar }
           style={{
             width: 50,
             aspectRatio: 1,
